@@ -6,8 +6,9 @@
     "@cap-js-community/odata-v2-adapter": "^1.15.9",
     "@cap-js/hana": "^2",
     "@sap/cds": "^9",
-    "express": "^4",
-    "@sap/xssec": "^4"
+    "@sap/cds-mtxs": "^3",
+    "@sap/xssec": "^4",
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
@@ -39,14 +40,21 @@
           "users": {
             "anubhav": {
               "password": "Welcome1",
-              "roles": ["Display", "Edit"],
+              "roles": [
+                "Display",
+                "Edit"
+              ],
               "attr": {
-                "spiderman": ["My Bank of London"]
+                "spiderman": [
+                  "My Bank of London"
+                ]
               }
             },
             "ananya": {
               "password": "ananya",
-              "roles": ["Edit"]
+              "roles": [
+                "Edit"
+              ]
             }
           }
         }
@@ -60,14 +68,21 @@
           "users": {
             "anubhav": {
               "password": "Welcome1",
-              "roles": ["Display", "Edit"],
+              "roles": [
+                "Display",
+                "Edit"
+              ],
               "attr": {
-                "spiderman": ["My Bank of London"]
+                "spiderman": [
+                  "My Bank of London"
+                ]
               }
             },
             "ananya": {
               "password": "ananya",
-              "roles": ["Edit"]
+              "roles": [
+                "Edit"
+              ]
             }
           }
         }
@@ -78,8 +93,13 @@
         },
         "auth": {
           "kind": "xsuaa"
-        }
+        },
+        "multitenancy": true
+      },
+      "[with-mtx]": {
+        "multitenancy": true
       }
-    }
+    },
+    "profile": "with-mtx-sidecar"
   }
 }
